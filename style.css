@@ -1,0 +1,96 @@
+/* Body Layout and Centering */
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Removes default margin */
+}
+
+/* Container: Limits the width and centers the calculator */
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px; /* Adds padding around the container */
+    display: flex;
+    justify-content: center; /* Centers the calculator */
+}
+
+/* Calculator Styling */
+.calculator {
+    background-color: #fff;
+    padding: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Makes sure calculator fills the container width */
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Display Input Field */
+input#display {
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px; /* Adds padding inside the display */
+    border: 1px solid #ccc; /* Adds border around display */
+    border-radius: 5px; /* Rounds the corners */
+    width: 100%; /* Makes the display fill the width of the calculator */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+}
+
+/* Button Styling */
+button {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: 1px solid #ccc; /* Adds border around buttons */
+    border-radius: 5px; /* Rounds button corners */
+    background-color: #f9f9f9; /* Light background for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px; /* Sets a uniform height for the buttons */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #e0e0e0; /* Darkens the button background on hover */
+}
+
+/* Button Active Effect */
+button:active {
+    background-color: #ddd; /* Lighter background when button is pressed */
+}
+
+/* Special Buttons (for example, clear and equals) */
+button.special {
+    background-color: #f56c42; /* Sets a distinct background color for special buttons */
+    color: white;
+}
+
+/* Special Button Hover */
+button.special:hover {
+    background-color: #f57c51; /* Changes color on hover */
+}
+
+/* Full-width buttons (e.g., "0") */
+button.full-width {
+    grid-column: span 2; /* Makes the button span 2 columns */
+}
